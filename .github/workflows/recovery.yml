@@ -15,7 +15,7 @@ on:
 
 env:
   MANIFEST: https://gitlab.com/Maitreya29/Manifest.git
-  DEVICE: cheeseburger_dumpling
+  DEVICE:cheeseburger_dumpling
   DT_LINK: https://github.com/Maitreya29/recovery_device_oneplus_cheeseburger-dumpling
   DT_PATH: device/oneplus/cheeseburger-dumpling
   TARGET: recoveryimage
