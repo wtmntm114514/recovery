@@ -14,10 +14,10 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
-  DEVICE: rosy
-  DT_LINK: https://github.com/ElytrA8/recovery_rosy
-  DT_PATH: device/xiaomi/rosy
+  MANIFEST: https://gitlab.com/Maitreya29/Manifest.git
+  DEVICE: cheeseburger-dumpling
+  DT_LINK: https://github.com/Maitreya29/recovery_device_oneplus_cheeseburger-dumpling
+  DT_PATH: device/oneplus/cheeseburger-dumpling
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
