@@ -14,10 +14,10 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/SHRP/platform_manifest_twrp_omni.git
-  DEVICE: cheeseburger_dumpling
-  DT_LINK: https://github.com/Maitreya29/recovery_device_oneplus_cheeseburger-dumpling
-  DT_PATH: device/oneplus/cheeseburger_dumpling
+  MANIFEST: https://gitlab.com/OrangeFox/sync.git
+  DEVICE: X00QD
+  DT_LINK: https://github.com/MLZ94/twrp_device_asus_X00Q/
+  DT_PATH: device/asus/X00QD
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
@@ -46,11 +46,11 @@ jobs:
             
        - name: Sync recovery source and device tree
          run: |
+             git clone https://gitlab.com/OrangeFox/sync.git k
              mkdir work
+             ./get_fox_10.sh ~/work
              cd work
-             repo init -u $MANIFEST --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
-             repo sync -j4
-             git clone $DT_LINK --depth=1 --single-branch $DT_PATH
+             git clone https://github.com/MLZ94/twrp_device_asus_X00Q/ --depth=1 -b OFRP $DT_PATH
              
        - name: Build
          run: |
