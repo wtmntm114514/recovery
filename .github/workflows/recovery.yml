@@ -46,8 +46,8 @@ jobs:
             
        - name: Sync recovery source and device tree
          run: |
+             cd /
              git clone https://gitlab.com/OrangeFox/sync.git k
-             mkdir work
              cd k
              ./get_fox_10.sh /work
              cd work
@@ -55,6 +55,7 @@ jobs:
              
        - name: Build
          run: |
+              cd /
               cd work
               . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
