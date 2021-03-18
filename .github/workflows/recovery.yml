@@ -17,7 +17,7 @@ env:
   MANIFEST: https://gitlab.com/OrangeFox/sync.git
   DEVICE: X00QD
   DT_LINK: https://github.com/MLZ94/twrp_device_asus_X00Q/
-  DT_PATH: device/asus/X00QD
+  DT_PATH: device/asus/X00Q
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
