@@ -46,17 +46,15 @@ jobs:
             
        - name: Sync recovery source and device tree
          run: |
-             cd /
              git clone https://gitlab.com/OrangeFox/sync.git k
              cd k
-             ./get_fox_10.sh /work
-             cd work
+             ./get_fox_10.sh ~/work
+             cd ~/work
              git clone https://github.com/MLZ94/twrp_device_asus_X00Q/ --depth=1 -b OFRP $DT_PATH
              
        - name: Build
          run: |
-              cd /
-              cd work
+              cd ~/work
               . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
        - uses: actions/upload-artifact@v2
