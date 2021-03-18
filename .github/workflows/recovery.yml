@@ -48,7 +48,8 @@ jobs:
          run: |
              git clone https://gitlab.com/OrangeFox/sync.git k
              mkdir work
-             ./get_fox_10.sh ~/work
+             cd k
+             ./get_fox_10.sh /work
              cd work
              git clone https://github.com/MLZ94/twrp_device_asus_X00Q/ --depth=1 -b OFRP $DT_PATH
              
