@@ -53,9 +53,11 @@ jobs:
              ./orangefox_sync.sh --branch 12.1 --path /home/runner/fox_12.1
              cd /home/runner/fox_12.1
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
+             pwd
              
        - name: Build
          run: |
+              pwd
               cd /home/runner/fox_12.1
               . build/envsetup.sh && lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && mka $TARGET -j$(nproc --all)
              
