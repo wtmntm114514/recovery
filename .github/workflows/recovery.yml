@@ -57,7 +57,7 @@ jobs:
        - name: Build
          run: |
               cd ~/fox_12.1
-              . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && mka $TARGET
+              . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && mka $TARGET -j$(nproc --all)
              
        - uses: actions/upload-artifact@v2
          with:
