@@ -15,11 +15,11 @@ on:
 
 env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
-  DEVICE: cheeseburger_dumpling
+  DEVICE: PD2196
   DT_LINK: https://github.com/Maitreya29/recovery_device_oneplus_cheeseburger-dumpling
   DT_PATH: device/oneplus/cheeseburger_dumpling
   TARGET: recoveryimage
-  TZ: Asia/Kolkata
+  TZ: Asia/China
 
 jobs:
   build:
