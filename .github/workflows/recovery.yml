@@ -14,7 +14,7 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://gitlab.com/OrangeFox/bootable/Recovery.git
+  MANIFEST: git://gitlab.com/OrangeFox/bootable/Recovery.git
   DEVICE: PD2196
   DT_LINK: https://github.com/wtmntm114514/action_build_twrp
   DT_PATH: device/vivo/PD2196
