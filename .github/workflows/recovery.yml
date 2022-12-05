@@ -62,6 +62,7 @@ jobs:
               cd ..
               cd ..
               pwd
+              ls
               cd fox_12.1
               . build/envsetup.sh && lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && mka $TARGET -j$(nproc --all)
              
