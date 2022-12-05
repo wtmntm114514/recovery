@@ -16,8 +16,8 @@ on:
 env:
   MANIFEST: https://gitlab.com/OrangeFox/bootable/Recovery.git
   DEVICE: PD2196
-  DT_LINK: https://github.com/Maitreya29/recovery_device_oneplus_cheeseburger-dumpling
-  DT_PATH: device/oneplus/cheeseburger_dumpling
+  DT_LINK: https://github.com/wtmntm114514/action_build_twrp
+  DT_PATH: device/vivo/PD2196
   TARGET: recoveryimage
   TZ: Asia/China
 
