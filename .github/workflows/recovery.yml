@@ -63,15 +63,16 @@ jobs:
               cd ..
               pwd
               ls
-              cd fox_12.1
+              mv fox_12.1 work/fox_12.1
+              cd work/fox_12.1
               . build/envsetup.sh && lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && mka $TARGET -j$(nproc --all)
              
        - uses: actions/upload-artifact@v2
          with:
           name: recoveryzip
-          path: /home/runner/fox_12.1/out/target/product/*/*.zip
+          path: work/fox_12.1/out/target/product/*/*.zip
 
        - uses: actions/upload-artifact@v2
          with:
           name: recoveryimage
-          path: /home/runner/fox_12.1/out/target/product/*/*.img
+          path: work/fox_12.1/out/target/product/*/*.img
