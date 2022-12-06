@@ -64,7 +64,11 @@ jobs:
               pwd
               ls
               cd /home/runner
-              . build/envsetup.sh && lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && mka $TARGET -j$(nproc --all)
+              . build/envsetup.sh
+              lunch omni_$DEVICE-eng
+              export ALLOW_MISSING_DEPENDENCIES=true
+              export LC_ALL="C"
+              mka $TARGET -j$(nproc --all)
              
        - uses: actions/upload-artifact@v2
          with:
