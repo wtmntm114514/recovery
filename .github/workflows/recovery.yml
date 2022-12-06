@@ -50,8 +50,8 @@ jobs:
              cd ~/OrangeFox_sync
              git clone https://gitlab.com/OrangeFox/sync.git
              cd ~/OrangeFox_sync/sync/
-             ./orangefox_sync.sh --branch 12.1 --path /home/runner/work
-             cd /home/runner/work
+             ./orangefox_sync.sh --branch 12.1 --path /home/runner
+             cd /home/runner
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
              pwd
              
@@ -63,15 +63,15 @@ jobs:
               cd ..
               pwd
               ls
-              cd work
+              cd /home/runner
               . build/envsetup.sh && lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && export LC_ALL="C" && mka $TARGET -j$(nproc --all)
              
        - uses: actions/upload-artifact@v2
          with:
           name: recoveryzip
-          path: work/out/target/product/*/*.zip
+          path: out/target/product/*/*.zip
 
        - uses: actions/upload-artifact@v2
          with:
           name: recoveryimage
-          path: work/out/target/product/*/*.img
+          path: out/target/product/*/*.img
